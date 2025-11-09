@@ -11,14 +11,8 @@ namespace _4
         static void Main(string[] args)
         {
             Book book1 = new Book("978-5-389-08846-7", "Евгений Онегин", "Пушкин А. С.");
-            Book book2 = new Book("978-5-04-101123-9", "Недоросль", "Фонвизин Д. И.");
-
-            book1.BookInfo();
-            book2.BookInfo();
-            book1.num1 = "Онегин Евгений ";
-            book1.num2 = "Пушкин А.С.";
-            Console.WriteLine("Измененная первая книга: ");
-            book1.BookInfo();
+            book1.BookInfo();         
+           
         }
     }
     class Book
