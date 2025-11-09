@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Book book1 = new Book("978-5-389-08846-7", "Евгений Онегин", "Пушкин А. С.");
+            Book book2 = new Book("978-5-04-101123-9", "Недоросль", "Фонвизин Д. И.");
+
+            book1.BookInfo();
+            book2.BookInfo();
+            book1.num1 = "Онегин Евгений ";
+            book1.num2 = "Пушкин А.С.";
+            Console.WriteLine("Измененная первая книга: ");
+            book1.BookInfo();
+        }
+    }
+    class Book
+    {
+        private readonly string num;
+        public string num1 { get; set; }
+        public string num2 { get; set; }
+        public Book(string isbn, string title, string author)
+        {
+            this.num = isbn;
+            this.num1 = title;
+            this.num2 = author;
+        }
+        public void BookInfo()
+        {
+            Console.WriteLine($"Название книги: {num1}");
+            Console.WriteLine($"Автор книги: {num2}");
+            Console.WriteLine($"Номер ISBN: {num}");
+            Console.WriteLine("- - - - - - - - - -");
+        }
+    }
+}
