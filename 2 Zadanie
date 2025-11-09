@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 2
+{
+    internal class ProgramConfig
+    {
+        static void Main(string[] args)
+        {
+            Print();
+        }
+        public const String Vers = "17.14.19";
+
+        public const String Name = "Bibi";
+
+        public static void Print()
+        {
+            Console.WriteLine($"Версия: {Vers}");
+            Console.WriteLine($"Имя разработчика: {Name}");
+        }
+    }
+}
