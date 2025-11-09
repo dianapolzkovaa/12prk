@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _12pr
+{
+    internal class Calculator
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите первое число: ");
+            if (double.TryParse(Console.ReadLine(), out double a))
+            { }
+            else
+            {
+                Console.WriteLine("Ошибка, введите число!");
+                return;
+            }
+
+            Console.Write("Введите первое число: ");
+            if (double.TryParse(Console.ReadLine(), out double b))
+            { }
+            else
+            {
+                Console.WriteLine("Ошибка, введите число!");
+                return;
+            }
+
+            double num1 = Addition(a, b);
+            double num2 = Differense(a, b);
+            double num3 = Multiplication(a, b);
+            double num4 = Division(a, b);
+            Console.WriteLine($"Числа: {a}, {b}\nСложение: {num1}\nРазность: {num2}\nПроизведение: {num3}");
+            if (b == 0)
+            {
+                Console.WriteLine("На ноль делить нельзя!");
+            }
+            else
+            {
+                Console.WriteLine($"Деление: {num4}");
+            }
+        }
+        public static double Addition(double a, double b)
+        {
+            return a + b;
+        }
+        public static double Differense(double a, double b)
+        {
+            return a - b;
+        }
+        public static double Multiplication(double a, double b)
+        {
+            return a * b;
+        }
+        public static double Division(double a, double b)
+        {
+            if (b == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return a / b;
+            }
+        }
+    }
+}
