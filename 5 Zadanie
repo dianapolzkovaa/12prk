@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _5
+{
+    public class Settings
+    {
+        private static readonly string config;
+        static Settings()
+        {
+            config = @"C:\Моя_Папка2";
+        }
+
+        public static void PrintPath()
+        {
+            Console.WriteLine($"Путь к файлу конфигурации:{config}");
+        }
+
+
+        static void Main(string[] args)
+        {
+            Settings.PrintPath();
+        }
+    }
+} 
